@@ -7,8 +7,10 @@ hello: hello.cpp
 	g++ -o hello hello.cpp
 
 # Copy 'hello' to the bin/ subdirectory (creating it if necessary)
+# Added the 'make' command to skip using 'make' separately
 .PHONY: install
 install:
+	make
 	mkdir -p bin
 	cp -p hello bin
 	rm -f hello
