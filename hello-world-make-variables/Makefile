@@ -1,11 +1,12 @@
 OUTPUT_FILE=hello
 INSTALL_DIR=bin
+CC=g++
 
 .PHONY: all
 all: $(OUTPUT_FILE)
 
 $(OUTPUT_FILE): hello.cpp
-	g++ -o hello hello.cpp
+	$(CC) -o hello hello.cpp
 
 .PHONY: install
 install:
